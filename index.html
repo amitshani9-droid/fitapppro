@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>FitTrip Pro</title>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="theme-auto">
+<header class="topbar">
+  <div class="title">FitTrip Pro</div>
+  <div class="subtitle" id="subtitle"></div>
+</header>
+
+<main class="container">
+  <section id="screen-today" class="screen active"></section>
+  <section id="screen-workouts" class="screen"></section>
+  <section id="screen-nutrition" class="screen"></section>
+  <section id="screen-track" class="screen"></section>
+  <section id="screen-photos" class="screen"></section>
+  <section id="screen-settings" class="screen"></section>
+</main>
+
+<nav class="bottomnav">
+  <button class="tab active" data-screen="today">היום</button>
+  <button class="tab" data-screen="workouts">אימונים</button>
+  <button class="tab" data-screen="nutrition">תזונה</button>
+  <button class="tab" data-screen="track">מעקב</button>
+  <button class="tab" data-screen="photos">תמונות</button>
+  <button class="tab" data-screen="settings">הגדרות</button>
+</nav>
+
+<script src="app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>
